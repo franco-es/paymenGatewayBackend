@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require("../app");
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = process.env.PORT || "3000";
+app.listen(port, async () => {
+  try {
+    console.log("Express server listening on" + port);
+  } catch (error) {
+    console.error("Unable to connect to the database:", error);
+  }
+});
